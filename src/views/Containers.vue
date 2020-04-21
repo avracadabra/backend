@@ -1,32 +1,32 @@
 <template>
   <div class="columns is-mobile">
-    <aside class="menu">
+    <aside class="menu column is-one-quarter">
       <b-menu>
         <b-menu-list label="Menu">
           <b-menu-item
             icon="format-list-bulleted"
-            label="Locations"
+            label="Containers"
             tag="router-link"
-            :to="{ name: 'locations' }"
+            :to="{ name: 'containers' }"
           ></b-menu-item>
           <b-menu-item
             icon="information-outline"
             label="Information"
             tag="router-link"
-            :to="{ name: 'help-location' }"
+            :to="{ name: 'help-container' }"
           ></b-menu-item>
           <b-menu-item active expanded icon="settings" label="Administrator">
             <b-menu-item
               icon="printer"
               label="Print"
               tag="router-link"
-              :to="{ name: 'print-location' }"
+              :to="{ name: 'print-container' }"
             ></b-menu-item>
           </b-menu-item>
         </b-menu-list>
       </b-menu>
     </aside>
-    <section>
+    <section class="column">
       <router-view></router-view>
     </section>
   </div>
