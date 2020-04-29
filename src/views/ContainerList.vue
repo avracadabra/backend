@@ -1,9 +1,17 @@
 <template>
   <div id="container-list-page">
-    <b-table id="container-list" :data="containers" :columns="columns">
+    <b-table
+      id="container-list"
+      :data="containers"
+      :columns="columns"
+      :loading="isLoading"
+    >
       <template slot="empty">
         <section class="section">
-          <div class="content has-text-grey has-text-centered">
+          <div
+            v-if="!isLoading"
+            class="content has-text-grey has-text-centered"
+          >
             <p>
               <b-icon icon="emoticon-sad" size="is-large"> </b-icon>
             </p>
@@ -22,6 +30,7 @@ export default {
   name: "ContainerList",
   data() {
     return {
+      isLoading: false,
       columns: [
         {
           field: "code",
@@ -45,7 +54,9 @@ export default {
         .all(),
   },
   async mounted() {
+    this.isLoading = true;
     await Container.fetch();
+    this.isLoading = false;
   },
 };
 </script>
