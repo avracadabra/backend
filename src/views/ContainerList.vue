@@ -45,8 +45,7 @@ export default {
         .all(),
   },
   async mounted() {
-    const test = Container.fetch();
-    return test;
+    await Container.fetch();
   },
 };
 </script>
