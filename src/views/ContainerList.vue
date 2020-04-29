@@ -1,17 +1,40 @@
 <template>
-  <section>
-    <b-collapse :open="false" aria-id="contentIdForA11y1">
-      <b-button
-        slot="trigger"
-        aria-controls="contentIdForA11y1"
-        icon-right="information-outline"
-      >
-      </b-button>
-      <b-message type="is-info" has-icon>
-        <strong>Containers</strong> or <strong>Locations</strong>
-        They are the same things on this system. Technically, containers are
-        characterized by the fact that their Types has the container behaviour.
-      </b-message>
-    </b-collapse>
-  </section>
+  <div id="container-list-page">
+    <b-table id="container-list" :data="containers" :columns="columns"></b-table>
+  </div>
 </template>
+<script>
+import Container from "@/models/Container";
+// import { ContainerType } from "@/models/containerType";
+
+export default {
+  name: "ContainerList",
+  data() {
+    return {
+      columns: [
+        {
+          field: "code",
+          label: "Container code"
+        },
+        {
+          field: "type.code",
+          label: "Container type code"
+        },
+        {
+          field: "type.label",
+          label: "Container type"
+        }
+      ]
+    };
+  },
+  computed: {
+    containers: () =>
+      Container.query()
+        .withAll()
+        .all()
+  },
+  async mounted() {
+    await Container.fetch();
+  }
+};
+</script>
