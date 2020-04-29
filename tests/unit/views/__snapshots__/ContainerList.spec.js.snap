@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContainerList mount ContainerList view 1`] = `
+<div
+  id="container-list-page"
+>
+  <div
+    class="b-table"
+    id="container-list"
+  >
+    <!---->
+     
+    <!---->
+     
+    <div
+      class="table-wrapper has-mobile-cards"
+    >
+      <table
+        class="table"
+      >
+        <thead>
+          <tr>
+            <!---->
+             
+            <!---->
+             
+            <th
+              class="is-unselectable"
+            >
+              <div
+                class="th-wrap"
+              >
+                Container code 
+                <!---->
+              </div>
+            </th>
+            <th
+              class="is-unselectable"
+            >
+              <div
+                class="th-wrap"
+              >
+                Container type code 
+                <!---->
+              </div>
+            </th>
+            <th
+              class="is-unselectable"
+            >
+              <div
+                class="th-wrap"
+              >
+                Container type 
+                <!---->
+              </div>
+            </th>
+             
+            <!---->
+          </tr>
+           
+          <!---->
+           
+          <!---->
+        </thead>
+         
+        <tbody>
+          <tr
+            class=""
+            draggable="false"
+          >
+            <!---->
+             
+            <!---->
+             
+            <td
+              class=""
+              data-label="Container code"
+            >
+              
+                                        warehouse
+                                    
+            </td>
+            <td
+              class=""
+              data-label="Container type code"
+            >
+              
+                                        LOCATION
+                                    
+            </td>
+            <td
+              class=""
+              data-label="Container type"
+            >
+              
+                                        Location
+                                    
+            </td>
+             
+            <!---->
+          </tr>
+           
+          <!---->
+           
+          <!---->
+          <tr
+            class=""
+            draggable="false"
+          >
+            <!---->
+             
+            <!---->
+             
+            <td
+              class=""
+              data-label="Container code"
+            >
+              
+                                        empl 1
+                                    
+            </td>
+            <td
+              class=""
+              data-label="Container type code"
+            >
+              
+                                        LOCATION
+                                    
+            </td>
+            <td
+              class=""
+              data-label="Container type"
+            >
+              
+                                        Location
+                                    
+            </td>
+             
+            <!---->
+          </tr>
+           
+          <!---->
+           
+          <!---->
+        </tbody>
+         
+        <!---->
+      </table>
+    </div>
+     
+    <!---->
+  </div>
+</div>
+`;

@@ -6,7 +6,6 @@ import Container from "@/models/Container";
 import { DefaultAdapter, ConnectionMode } from "@vuex-orm/plugin-graphql";
 import ContainerType from "@/models/ContainerType";
 Vue.use(Vuex);
-
 // Create a new instance of Database.
 const database = new VuexORM.Database();
 
@@ -32,8 +31,8 @@ VuexORM.use(VuexORMGraphQL, {
 
 export default new Vuex.Store({
   plugins: [VuexORM.install(database)],
-  // state: {},
-  // mutations: {},
-  // actions: {},
-  // modules: {},
+  state: {},
+  mutations: {},
+  actions: {},
+  modules: {},
 });
