@@ -25,7 +25,7 @@ export class CustomAdapter extends DefaultAdapter {
 VuexORM.use(VuexORMGraphQL, {
   database,
   url: "http://127.0.0.1:8080/graphql/",
-  debug: process.env.NODE_ENV !== "production",
+  debug: false,
   adapter: new CustomAdapter(),
 });
 
